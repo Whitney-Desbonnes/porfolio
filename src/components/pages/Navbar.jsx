@@ -44,6 +44,9 @@ const NavbarStyled = styled.nav`
     border-radius: 10px;
     padding: 10px 20px;
     margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    box-shadow: 0px 0px 4px 0px #00000040;
 
     ul {
         display: flex;
@@ -56,8 +59,8 @@ const NavbarStyled = styled.nav`
 
             a {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
+                gap: 10px;
                 align-items: center;
                 padding: 10px;
                 background-color: var(--bgc-links);

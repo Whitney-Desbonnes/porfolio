@@ -76,20 +76,21 @@ const MainStyled = styled.div`
 const IconThemeStyled = styled.span`
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     svg {
         color: var(--theme-color-icon);
         cursor: pointer;
-        font-size: 24px;
+        font-size: 20px;
         padding: 10px;
         background-color: var(--bgc-links);
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 100px;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
     }
 `
