@@ -4,7 +4,7 @@ export default function About() {
     // comportements
 
     // render / rendu
-    return(
+    return (
         <div>
             À propos
         </div>

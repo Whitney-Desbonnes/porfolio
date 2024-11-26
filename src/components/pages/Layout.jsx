@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { IoMoonOutline } from "react-icons/io5";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { useEffect, useState } from "react";
+import Informations from "./Informations";
 
 export default function Layout() {
     // state (état, données)
@@ -23,16 +24,16 @@ export default function Layout() {
                 {isDarkMode ? 
                     (
                         <>
-                            <MdOutlineWbSunny onClick={toggleTheme} />
                             <span>Mode sombre activé</span>
+                            <MdOutlineWbSunny onClick={toggleTheme} />
                         </>
 
                     ) 
                     : 
                     (
                         <>
-                            <IoMoonOutline onClick={toggleTheme} /> 
                             <span>Mode clair activé</span>
+                            <IoMoonOutline onClick={toggleTheme} /> 
                         </>
                     )
                 }
@@ -42,9 +43,7 @@ export default function Layout() {
             <Navbar/>
 
             <MainStyled>
-                <div>
-                    Côté gauche
-                </div>
+                <Informations/>
 
                 <div>
                     <Outlet/>
@@ -71,25 +70,34 @@ const MainStyled = styled.div`
         border-radius: 10px;
         padding: 20px;
     }
+
+    @media screen and (max-width:990px) {
+        flex-direction: column;
+
+        > div {
+            width: 100% !important;
+        }
+    }
 `
 
 const IconThemeStyled = styled.span`
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     svg {
         color: var(--theme-color-icon);
         cursor: pointer;
-        font-size: 24px;
+        font-size: 20px;
         padding: 10px;
         background-color: var(--bgc-links);
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 100px;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
     }
 `
