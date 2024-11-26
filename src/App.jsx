@@ -1,6 +1,10 @@
 import './App.css';
-import Navbar from "./components/pages/Navbar";
+import Layout from "./components/pages/Layout";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Work from "./components/pages/Work";
+import Contact from "./components/pages/Contact";
 
 
 function App() {
@@ -8,8 +12,14 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element: <Navbar/>,
+      element: <Layout/>,
       errorElement: <div>Error Page</div>,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/about", element: <About /> },
+        { path: "/work", element: <Work /> },
+        { path: "/contact", element: <Contact /> },
+      ],
     },
   ])
 
