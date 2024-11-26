@@ -19,7 +19,7 @@ export default function Informations() {
             </div>
 
             <div className="img">
-                <img src="public/whitney.png" alt="" />
+                <img src="public/whitney.png" alt="photo" />
             </div>
             <p className="name">Whitney DESBONNES</p>
 
