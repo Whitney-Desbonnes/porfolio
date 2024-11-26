@@ -4,7 +4,7 @@ export default function Contact() {
     // comportements
 
     // render / rendu
-    return(
+    return (
         <div>
             Contact
         </div>

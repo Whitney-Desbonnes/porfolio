@@ -4,7 +4,7 @@ export default function Home() {
     // comportements
 
     // render / rendu
-    return(
+    return (
         <div>
             Accueil
         </div>
