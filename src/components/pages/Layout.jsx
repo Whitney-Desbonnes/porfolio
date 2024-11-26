@@ -24,16 +24,16 @@ export default function Layout() {
                 {isDarkMode ? 
                     (
                         <>
-                            <MdOutlineWbSunny onClick={toggleTheme} />
                             <span>Mode sombre activé</span>
+                            <MdOutlineWbSunny onClick={toggleTheme} />
                         </>
 
                     ) 
                     : 
                     (
                         <>
-                            <IoMoonOutline onClick={toggleTheme} /> 
                             <span>Mode clair activé</span>
+                            <IoMoonOutline onClick={toggleTheme} /> 
                         </>
                     )
                 }
@@ -69,6 +69,14 @@ const MainStyled = styled.div`
         background-color: var(--bgc-card);
         border-radius: 10px;
         padding: 20px;
+    }
+
+    @media screen and (max-width:990px) {
+        flex-direction: column;
+
+        > div {
+            width: 100% !important;
+        }
     }
 `
 
