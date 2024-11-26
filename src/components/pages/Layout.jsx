@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { IoMoonOutline } from "react-icons/io5";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { useEffect, useState } from "react";
+import Informations from "./Informations";
 
 export default function Layout() {
     // state (état, données)
@@ -42,9 +43,7 @@ export default function Layout() {
             <Navbar/>
 
             <MainStyled>
-                <div>
-                    Côté gauche
-                </div>
+                <Informations/>
 
                 <div>
                     <Outlet/>
