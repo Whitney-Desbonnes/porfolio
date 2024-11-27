@@ -14,31 +14,45 @@ export default function Layout() {
     // render / rendu
     return(
         <>
-            <Navbar/>
-
+            <HeaderStyled>
+                <Navbar/>
+            </HeaderStyled>
             <MainStyled>
-                <Informations/>
-
                 <div>
-                    <Outlet/>
+                    <Informations/>
+
+                    <div>
+                        <Outlet/>
+                    </div>
                 </div>
             </MainStyled>
         </>
     )
 }
 
-const MainStyled = styled.div`
-    display: flex;
-    gap: 20px;
+const HeaderStyled = styled.header`
+    padding: 20px 20px 0;
 
-    > div:first-child {
+    @media screen and (max-width:680px) {
+        padding: 10px 10px 0;
+    }
+`
+
+const MainStyled = styled.main`
+    padding: 20px;
+    > div {
+        display: flex;
+        gap: 20px;
+    }
+
+    > div > div:first-child {
         width: 30%; 
         background-color: var(--bgc-card);
         border-radius: 10px;
         padding: 20px;
     }
 
-    > div:last-child {
+    > div > div:last-child {
         width: 70%; 
         background-color: var(--bgc-card);
         border-radius: 10px;
@@ -46,10 +60,16 @@ const MainStyled = styled.div`
     }
 
     @media screen and (max-width:990px) {
-        flex-direction: column;
-
         > div {
+            flex-direction: column;
+        }
+
+        > div > div {
             width: 100% !important;
         }
+    }
+
+    @media screen and (max-width:680px) {
+        padding: 10px;
     }
 `
