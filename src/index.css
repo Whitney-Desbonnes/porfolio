@@ -12,8 +12,8 @@
 body {
     background: var(--bgc-body);
     font-family: var(--font-primary);
-    padding: 20px;
     color: var(--primary-text);
+    position: relative;
 }
 
 a {

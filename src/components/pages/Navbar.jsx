@@ -15,7 +15,7 @@ export default function Navbar() {
     // state (état, données)
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
       }, [isDarkMode]);
@@ -77,14 +77,11 @@ export default function Navbar() {
 
 const NavbarStyled = styled.nav`
     padding: 20px 0;
-    background-color: var(--bgc);
     border-radius: 10px;
     padding: 5px;
-    margin-bottom: 20px;
     width: 100%;
     max-width: 650px;
     margin-left: auto;
-    box-shadow: 0px 0px 4px 0px #00000040;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -125,6 +122,7 @@ const NavbarStyled = styled.nav`
         display: none !important;
         cursor: pointer;
         color: var(--primary-text);
+        padding: 5px 20px;
     }
 
     a.active  {
@@ -139,33 +137,37 @@ const NavbarStyled = styled.nav`
     @media screen and (max-width:680px) {
         display: flex;
         align-items: center;
-        justify-content: center;
         max-width: 150px;
-        position: relative;
+        box-shadow: initial;
+        padding: 0;
 
         button {
             display: flex !important;
         }
 
         ul {
-            max-height: 0;
+            height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease;
+            transition: 0.5s;
             position: absolute;
             top: 0;
-            width: 100vw;
-            background-color: #fff;
-            transform: translate(-26%, 75px);
+            left: 0%;
+            width: 100%;
+            background-color: var(--bgc-body);
             flex-direction: column;
             gap: 10px;
+            justify-content: flex-start;
+            align-items: baseline;
         }
 
         ul.open {
-            max-height: 300px;
+            transform: translate(0%, 60px);
+            height: 100vh;
         }
 
         li {
             width: 100%;
+            flex: initial;
         }
     }
 
