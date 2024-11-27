@@ -9,19 +9,21 @@ export default function Informations() {
     // render / rendu
     return (
         <InformationsStyled>
-            <div className="entete">
+            <div className="poste">
                 <h1>
-                    <span>Développeur</span>
-                    <span> front end</span>
+                    Développeur
+                    front&nbsp;end
                 </h1>
                 <p>CDI / CDD / Intérim / Freelance</p>
                 <p>Disponibilité selon préavis</p>
             </div>
 
-            <div className="img">
-                <img src="images/whitney.png" alt="photo" />
+            <div className="whitney">
+                <div className="photo">
+                    <img src="images/whitney.png" alt="photo" />
+                </div>
+                <p className="name">Whitney DESBONNES</p>
             </div>
-            <p className="name">Whitney DESBONNES</p>
 
             <SocialMedia/>
 
@@ -30,17 +32,14 @@ export default function Informations() {
 }
 
 const InformationsStyled = styled.div`
-    .entete {
+    .poste {
         margin-bottom: 20px;
+        
 
         h1 {
             text-transform: uppercase;
             line-height: 1.1;
             margin-bottom: 10px;
-
-            span {
-                display: block;
-            }
         }
 
         p {
@@ -49,11 +48,13 @@ const InformationsStyled = styled.div`
 
     }
 
-    .img {
+    .photo {
         display: flex;
         align-items: end;
+        justify-content: center;
         img {
             width: 100%;
+            max-width: 250px;
         }
     }
 
@@ -63,64 +64,30 @@ const InformationsStyled = styled.div`
         text-align: center;
         padding: 10px 20px;
         margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 18px;
     }
+
 
     @media screen and (max-width:990px) {
-        display: grid;
-        grid-template-columns: 150px auto;
-
-        .entete {
-            grid-column: 1 / span 2;
-            grid-row: 1;
-            margin-left: 10px;
+        .poste {
             text-align: center;
-
-            h1 {
-
-                span {
-                    display: inline !important;
-                }
-            }
         }
 
-        .img {
-            align-items: start;
-            grid-column: 1;
-            grid-row: 1;
-        
-            img {
-                max-width: 150px;
-            }
-        }
-
-        .name, ul {
-            grid-column: span 2;
-        }
-    }
-
-    @media screen and (max-width:780px) {
-        h1 {
-            font-size: 20px;
+        .poste, .name {
+            margin-bottom: 10px;
         }
     }
 
     @media screen and (max-width:680px) {
-        .entete {
-            grid-row: 1;
-            margin-left: 0;
-
-            h1 {
-
-                span {
-                    display: inline !important;
-                }
-            }
+        h1 {
+            font-size: 22px;
         }
 
-        .img {
-            grid-row: 2;
-            grid-column: 1 / span 2;
-            justify-content: center;
+        .photo {
+            img {
+                max-width: 150px;
+            }
         }
 
     }
