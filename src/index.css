@@ -35,7 +35,9 @@ a {
     /* Text colors */
     --primary-text:#444;
     --secondary-text:#fff;
-    --color-links:#bf2464;
+    --tertiary-text:#7d6b7d;
+    --bold-text: #563a22;
+    --color-links:#9a693e;
     --theme-color-icon: #000;
 }
 
@@ -53,6 +55,6 @@ a {
     /* Text colors */
     --primary-text:#E1E1E1;
     --secondary-text:#FFFFFF;
-    --color-links:#bf2464;
+    --color-links:#9a693e;
     --theme-color-icon: #bfb224;
 }
