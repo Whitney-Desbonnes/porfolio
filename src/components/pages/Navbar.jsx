@@ -21,10 +21,9 @@ export default function Navbar() {
       }, [isDarkMode]);
 
     const menuItems = [
-        {id: 1, name: "Accueil", icon: <IoHomeOutline />, path:"/"},
-        {id: 2, name: "À propos", icon: <CiMemoPad />, path:"/about"},
-        {id: 3, name: "Projets", icon: <MdBusinessCenter />, path:"/work"},
-        {id: 4, name: "Contact", icon: <TiContacts />, path:"/contact"},
+        {id: 1, name: "À propos", icon: <CiMemoPad />, path:"/"},
+        {id: 2, name: "Projets", icon: <MdBusinessCenter />, path:"/work"},
+        {id: 3, name: "Contact", icon: <TiContacts />, path:"/contact"},
     ]
 
     // comportements
@@ -98,7 +97,7 @@ const NavbarStyled = styled.nav`
     li {
         flex: 1;
 
-        li:hover a {
+        &:hover a:not(.active) {
             background-color: var(--secondary-text);
             color: var(--color-links);
             border: 1px solid var(--color-links);

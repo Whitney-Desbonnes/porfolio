@@ -40,6 +40,11 @@ const InformationsStyled = styled.div`
             text-transform: uppercase;
             line-height: 1.1;
             margin-bottom: 10px;
+            color: var(--bold-text);
+
+            span {
+                display: block;
+            }
         }
 
         p {
@@ -64,6 +69,7 @@ const InformationsStyled = styled.div`
         text-align: center;
         padding: 10px 20px;
         margin-bottom: 20px;
+        color: var(--bold-text);
         font-weight: 600;
         font-size: 18px;
     }
