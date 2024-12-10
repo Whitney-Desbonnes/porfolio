@@ -31,7 +31,7 @@ const SocialMediaStyled = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 
     li {
         flex: 1;
@@ -58,5 +58,12 @@ const SocialMediaStyled = styled.ul`
         color: var(--color-links);
         border: 1px solid var(--color-links);
     }
+
+    @media screen and (max-width:990px) {
+        a {
+            padding: 5px !important;
+        }
+    }
+
 `
 
