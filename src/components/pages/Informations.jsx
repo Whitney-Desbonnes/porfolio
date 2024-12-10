@@ -37,6 +37,7 @@ const InformationsStyled = styled.div`
             text-transform: uppercase;
             line-height: 1.1;
             margin-bottom: 10px;
+            color: var(--bold-text);
 
             span {
                 display: block;
@@ -63,6 +64,7 @@ const InformationsStyled = styled.div`
         text-align: center;
         padding: 10px 20px;
         margin-bottom: 20px;
+        color: var(--bold-text);
     }
 
     @media screen and (max-width:990px) {
