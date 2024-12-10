@@ -38,7 +38,7 @@ export default function Work() {
             <ul>
                 <li>
                     <h3>Professionnels</h3>
-                    <p>Toute la partie intégration front sur ces trois sites ont été entièrement conçus par mes soins dans le cadre de mon poste actuel d'<span>Intégrateur web</span> chez <a href="https://fr.linkedin.com/company/santoredition" target="_blank">Santor Edition</a>. 
+                    <p>Toute la partie intégration front sur ces trois sites ont été entièrement conçus par mes soins dans le cadre de mon poste actuel d'<span>Intégrateur web</span> chez <a href="https://fr.linkedin.com/company/santoredition" target="_blank">Santor&nbsp;Edition</a>. 
                     </p>
 
                     <p style={{marginBottom:"0"}}>Stack technique</p>
@@ -62,7 +62,7 @@ export default function Work() {
                     <h3>Personnels</h3>
                     <p>Cette section met en avant des projets personnels que j'ai réalisés dans le but de renforcer mes compétences et d'explorer de nouvelles idées.
                     <br/> 
-                    Bien que ces projets reflètent seulement mes premiers pas dans le domaine du web, j'ai trouvé important de les montrer car ils témoignent de ma volonté constante d'apprendre.</p>
+                    Bien que ces projets reflètent seulement mes premiers pas dans le domaine du web, j'ai trouvé important de les montrer car ils témoignent de ma volonté d'évoluer.</p>
                     <div className="list-items">
                         {itemsPerso.map(item =>( 
                             <LinkItemStyled className="items" key={item.id} href={item.link} target="_blank" image={item.image}>

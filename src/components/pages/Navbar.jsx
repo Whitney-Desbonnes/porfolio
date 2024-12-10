@@ -15,7 +15,7 @@ export default function Navbar() {
     // state (état, données)
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
       }, [isDarkMode]);
