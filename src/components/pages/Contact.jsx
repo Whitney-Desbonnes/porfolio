@@ -8,12 +8,9 @@ import { FaCheckCircle } from "react-icons/fa";
 
 export default function Contact() {
     // state (état, données)
-<<<<<<< Updated upstream
-=======
     const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
     const [isSubmitted, setIsSubmitted] = useState(false);
 
->>>>>>> Stashed changes
     const formInputs = [
         {id:1, value:"nom", name: "lastname", type:"text", tag:"input"},
         {id:2, value:"prénom", name: "name", type:"text", tag:"input"},
@@ -24,32 +21,6 @@ export default function Contact() {
     const onSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-<<<<<<< Updated upstream
-    
-        formData.append("access_key", "d499efb9-01ac-46ee-a56e-059da29f9768");
-    
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-    
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          },
-          body: json
-        }).then((res) => res.json());
-    
-        if (res.success) {
-          console.log("Success", res);
-        }
-      };
-
-    // render / rendu
-    return (
-        <FormStyled onSubmit={onSubmit}>
-            <h2>Me contacter</h2>
-=======
     try {
         const response = await fetch(FORMSPREE_URL, {
             method: "POST",
@@ -77,7 +48,6 @@ export default function Contact() {
             <div>
                 <h2>Contact</h2>
                 <p>Me contacter</p>
->>>>>>> Stashed changes
 
                 <h3>Par téléphone</h3>
                 <div className="contact">
