@@ -10,6 +10,7 @@ export default function Contact() {
     // state (état, données)
     const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const formInputs = [
         {id:1, value:"nom", name: "lastname", type:"text", tag:"input"},
@@ -20,26 +21,34 @@ export default function Contact() {
     // comportements
     const onSubmit = async (event) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
-    try {
-        const response = await fetch(FORMSPREE_URL, {
-            method: "POST",
-            headers: {
-                "Accept": "application/json"
-            },
-            body: formData
-        });
+        setIsLoading(true);
 
-        if (response.ok) {
-            setIsSubmitted(true);
-            event.target.reset();
-        } else {
-            alert("Une erreur est survenue. Veuillez réessayer.");
+        const formData = new FormData(event.target);
+        try {
+            const response = await fetch(FORMSPREE_URL, {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json"
+                },
+                body: formData
+            });
+
+        setTimeout(() => {
+                if (response.ok) {
+                    setIsSubmitted(true);
+                    event.target.reset();
+                } else {
+                    alert("Une erreur est survenue. Veuillez réessayer.");
+                }
+                setIsLoading(false); // Désactiver le chargement
+            }, 1500); // Durée du délai en millisecondes
+        } catch (error) {
+            setTimeout(() => {
+                alert("Erreur réseau. Veuillez vérifier votre connexion.");
+                console.error(error);
+                setIsLoading(false);
+            }, 1500); // Délai même en cas d’erreur
         }
-    } catch (error) {
-        alert("Erreur réseau. Veuillez vérifier votre connexion.");
-        console.error(error);
-    }
     };
 
     // render / rendu
@@ -92,7 +101,7 @@ export default function Contact() {
                         />
                     </div>
         
-                    <button type="submit">Envoyer</button>
+                    <button type="submit">{isLoading ? "Envoi en cours..." : "Envoyer"}</button>
                 </>
             )}            
         </FormStyled>
