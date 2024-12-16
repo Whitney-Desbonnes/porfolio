@@ -12,7 +12,7 @@ export default function About() {
             <p>Présentation</p>
 
 
-            <p className="accroche">Tout à commencé...</p>
+            <p className="accroche">Tout a commencé...</p>
             <p>
                 Après avoir terminé mes études supérieures en comptabilité, où j'ai décidé de me réorienter dans le <span>domaine du web</span>.
                 <br />
@@ -38,15 +38,15 @@ export default function About() {
             <p>
                 Je suis déterminée à progresser dans ma carrière en tant que <span>Développeur Front-End</span>. 
                 <br />
-                C'est pourquoi je recherche actuellement un poste qui me permettra de travailler sur <span>des projets plus variés et ambitieux</span>, tout en élargissant mon expertise, notamment sur un framework tels que <span>React</span>, sur lequel je me forme en autodidacte depuis plusieurs mois.
+                C'est pourquoi je recherche actuellement un poste qui me permettra de travailler sur <span>des projets plus variés et ambitieux</span>, tout en élargissant mon expertise, notamment sur un framework tel que <span>React</span>, sur lequel je me forme en autodidacte depuis plusieurs mois.
             </p>
         </AboutStyled>
     )
 }
 
 const AboutStyled = styled.div`
-    h2 {
-        color: var(--bold-text);
+    h2 + p {
+        color: var(--color-links);
     }
 
     .accroche {
