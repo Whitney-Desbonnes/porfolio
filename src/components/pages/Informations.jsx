@@ -14,8 +14,11 @@ export default function Informations() {
                     Développeur
                     front&nbsp;end
                 </h1>
-                <p>CDI / CDD / Intérim / Freelance</p>
-                <p>Disponibilité selon préavis</p>
+                <p>
+                    CDI / CDD / Intérim / Freelance
+                    <br/>
+                    Disponibilité selon préavis
+                </p>
             </div>
 
             <div className="whitney">
@@ -78,10 +81,25 @@ const InformationsStyled = styled.div`
     @media screen and (max-width:990px) {
         .poste {
             text-align: center;
+            cursor: pointer;
         }
 
         .poste, .name {
             margin-bottom: 10px;
+        }
+
+        .poste p {
+            max-height: 0px;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .poste:hover p {
+            max-height: 60px;
+        }
+
+        .photo {
+            display: none;
         }
     }
 
@@ -89,13 +107,6 @@ const InformationsStyled = styled.div`
         h1 {
             font-size: 22px;
         }
-
-        .photo {
-            img {
-                max-width: 150px;
-            }
-        }
-
     }
 
 `
