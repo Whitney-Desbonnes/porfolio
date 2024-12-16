@@ -129,6 +129,13 @@ const FormStyled = styled.form`
         h3 {
             margin: 0;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+             gap: 5px;
+        } 
+        
+        p {
+            padding: 0 23px;
         }
     }
     
