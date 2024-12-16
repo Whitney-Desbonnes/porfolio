@@ -62,6 +62,11 @@ export default function Contact() {
                 <div className="contact">
                     <BsFillTelephoneFill /> <a href="tel:0647832076">06 47 83 20 76</a>
                 </div>
+
+                <h3>Par mail</h3>
+                <div className="contact">
+                    <IoIosMail /> <a href="mailto:whitney.desbonnes@gmail.com">whitney.desbonnes@gmail.com</a>
+                </div>
             </div>
                 
             <FormStyled onSubmit={onSubmit}>
@@ -72,11 +77,6 @@ export default function Contact() {
                 </div>
             ) : (
                 <>
-                    <h3>Par mail</h3>
-                    <div className="contact">
-                        <IoIosMail /> <a href="mailto:whitney.desbonnes@gmail.com">whitney.desbonnes@gmail.com</a>
-                    </div>
-        
                     {formInputs.map(formInput => (
                         <div className="input-box" key={formInput.id}>
                             <label htmlFor={formInput.name}>{formInput.value}</label>
@@ -124,6 +124,23 @@ const ContactStyled = styled.div`
     div {
         margin-bottom: 20px;
     }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+
+
+    @media screen and (max-width:990px) {
+        .contact:last-child {
+
+            a {
+                word-break: break-all;
+            }
+        }
+    }
 `
 
 const FormStyled = styled.form`
@@ -146,13 +163,6 @@ const FormStyled = styled.form`
             padding: 0 23px;
         }
     }
-    
-    .contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
 
     .input-box {
         display: flex;
@@ -170,6 +180,7 @@ const FormStyled = styled.form`
             color: var(--color-links);
             border-radius: 5px;
             border: 1px solid var(--color-links);
+            font-family: var(--font-primary);
         }
 
         textarea {
@@ -179,6 +190,7 @@ const FormStyled = styled.form`
             color: var(--color-links);
             border-radius: 5px;
             border: 1px solid var(--color-links);
+            font-family: var(--font-primary);
         }
     }
 
@@ -193,7 +205,7 @@ const FormStyled = styled.form`
         cursor: pointer;
     }
 
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:990px) {
         .success-message {
         padding: 10px;
             h3 {
@@ -209,6 +221,16 @@ const FormStyled = styled.form`
             p {
                 padding: 0;
             }
+        }
+
+        .input-box {
+            input {
+                max-width: 100%;
+            }
+        }
+
+        button[type="submit"] {
+            max-width: 100%;
         }
     }
 `
