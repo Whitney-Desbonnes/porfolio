@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { IoHomeOutline } from "react-icons/io5";
 import { CiMemoPad } from "react-icons/ci";
 import { MdBusinessCenter } from "react-icons/md";
 import { TiContacts } from "react-icons/ti";
@@ -21,8 +20,8 @@ export default function Navbar() {
       }, [isDarkMode]);
 
     const menuItems = [
-        {id: 1, name: "À propos", icon: <CiMemoPad />, path:"/"},
-        {id: 2, name: "Projets", icon: <MdBusinessCenter />, path:"/work"},
+        {id: 1, name: "À propos", icon: <CiMemoPad />, path:"/", hash:"about"},
+        {id: 2, name: "Projets", icon: <MdBusinessCenter />, path:"/work", hash:"about"},
         {id: 3, name: "Contact", icon: <TiContacts />, path:"/contact"},
     ]
 
@@ -130,7 +129,12 @@ const NavbarStyled = styled.nav`
     }
 
     @media screen and (max-width:990px) {
-        max-width: 100%;
+        max-width: 100% !important;
+        width: 100%;
+
+        button {
+            width: 100%;
+        }
     }
 
     @media screen and (max-width:680px) {
@@ -157,11 +161,12 @@ const NavbarStyled = styled.nav`
             gap: 10px;
             justify-content: flex-start;
             align-items: baseline;
+            transform: translate(0%, 60px);
         }
 
         ul.open {
-            transform: translate(0%, 60px);
             height: 100vh;
+            padding: 20px;
         }
 
         li {

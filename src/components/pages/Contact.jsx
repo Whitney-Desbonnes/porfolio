@@ -5,6 +5,8 @@ import { IoIosMail } from "react-icons/io";
 
 export default function Contact() {
     // state (état, données)
+    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
+
     const formInputs = [
         {id:1, value:"nom", name: "lastname", type:"text", tag:"input"},
         {id:2, value:"prénom", name: "name", type:"text", tag:"input"},
@@ -15,30 +17,25 @@ export default function Contact() {
     const onSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-    
-        formData.append("access_key", "d499efb9-01ac-46ee-a56e-059da29f9768");
-    
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-    
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          },
-          body: json
-        }).then((res) => res.json());
-    
-        if (res.success) {
-          console.log("Success", res);
+
+        const response = await fetch(FORMSPREE_URL, {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            alert("Message envoyé avec succès !");
+            event.target.reset();
+        } else {
+            alert("Une erreur est survenue, veuillez réessayer.");
         }
-      };
+    };
 
     // render / rendu
     return (
         <FormStyled onSubmit={onSubmit}>
-            <h2>Me contacter</h2>
+            <h2>Contact</h2>
+            <p>Me contacter</p>
 
             <h3>Par téléphone</h3>
             <div className="contact">
@@ -72,9 +69,9 @@ const FormStyled = styled.form`
     background-color: var(--bgc-links);
     padding: 20px;
     border-radius: 5px;
-
-    h2 {
-        margin-bottom: 20px;
+    
+    h2 + p {
+        color: var(--color-links);
     }
 
     h3 {
@@ -108,6 +105,7 @@ const FormStyled = styled.form`
             color: var(--color-links);
             border-radius: 5px;
             border: 1px solid var(--color-links);
+            font-family: var(--font-primary);
         }
 
         textarea {
@@ -117,6 +115,7 @@ const FormStyled = styled.form`
             color: var(--color-links);
             border-radius: 5px;
             border: 1px solid var(--color-links);
+            font-family: var(--font-primary);
         }
     }
 
