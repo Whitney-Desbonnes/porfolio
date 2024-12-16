@@ -149,27 +149,6 @@ const NavbarStyled = styled.nav`
         }
 
         ul {
-<<<<<<< Updated upstream
-            height: 0;
-            overflow: hidden;
-            transition: 0.5s;
-            position: absolute;
-            top: 0;
-            left: 0%;
-            width: 100%;
-            background-color: var(--bgc-body);
-            flex-direction: column;
-            gap: 10px;
-            justify-content: flex-start;
-            align-items: baseline;
-            transform: translate(0%, 60px);
-        }
-
-        ul.open {
-            height: 100vh;
-            padding: 20px;
-        }
-=======
         clip-path: inset(0 0 100% 0);
         transition: clip-path 0.5s ease;
         position: absolute;
@@ -188,9 +167,6 @@ const NavbarStyled = styled.nav`
     ul.open {
         clip-path: inset(0 0 0 0);
     }
-
->>>>>>> Stashed changes
-
         li {
             width: 100%;
             flex: initial;
