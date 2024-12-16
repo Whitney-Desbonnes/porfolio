@@ -68,8 +68,7 @@ export default function Contact() {
             {isSubmitted ? (
                 <div className="success-message">
                     <h3><FaCheckCircle /> Message envoyé avec succès !</h3>
-                    <p>Merci pour votre prise de contact.</p>
-                    <p>Je vous répondrai au plus vite pour poursuivre notre échange.</p>
+                    <p>Merci pour votre prise de contact. Je vous répondrai au plus vite pour poursuivre notre échange.</p>
                 </div>
             ) : (
                 <>
@@ -104,7 +103,7 @@ export default function Contact() {
                     <button type="submit">{isLoading ? "Envoi en cours..." : "Envoyer"}</button>
                 </>
             )}            
-        </FormStyled>
+            </FormStyled>
         </ContactStyled>
     )
 }
@@ -192,5 +191,24 @@ const FormStyled = styled.form`
         width: 100%;
         max-width: 300px;
         cursor: pointer;
+    }
+
+    @media screen and (max-width:600px) {
+        .success-message {
+        padding: 10px;
+            h3 {
+                flex-direction: column;
+                justify-content: center;
+            } 
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        
+            p {
+                padding: 0;
+            }
+        }
     }
 `
