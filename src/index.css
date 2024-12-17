@@ -21,6 +21,12 @@ a {
     color: var(--primary-text);
 }
 
+#root {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 :root[data-theme="light"] {
     /* Fonts */
     --font-primary: "Poppins", sans-serif;

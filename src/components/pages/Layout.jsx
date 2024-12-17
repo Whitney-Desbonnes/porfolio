@@ -50,6 +50,7 @@ const MainStyled = styled.main`
         background-color: var(--bgc-card);
         border-radius: 10px;
         padding: 20px;
+        align-self: baseline;
     }
 
     > div > div:last-child {
