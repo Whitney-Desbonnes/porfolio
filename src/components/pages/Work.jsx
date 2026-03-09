@@ -56,7 +56,7 @@ export default function Work() {
 
                 <li>
                     <h3>Personnels</h3>
-                    <p>Cette section présente des projets personnels réalisés pour pratiquer et approfondir mes compétences en développement.</p>
+                    <p>Projets réalisés pour approfondir mes compétences en HTML, CSS, JavaScript et React.</p>
                     <div className="list-items">
                         {itemsPerso.map(item =>( 
                             <LinkItemStyled className="items" key={item.id} href={item.link} target="_blank" image={item.image}>
