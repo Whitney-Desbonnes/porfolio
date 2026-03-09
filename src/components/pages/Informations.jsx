@@ -15,9 +15,11 @@ export default function Informations() {
                     front&nbsp;end
                 </h1>
                 <p>
-                    CDI / CDD / Intérim / Freelance
-                    <br/>
-                    Disponibilité selon préavis
+                    Ouverte aux opportunités <br/>
+                    CDI / CDD / Freelance
+                    <br/><br/>
+
+                    Disponible sous préavis
                 </p>
             </div>
 
@@ -95,7 +97,7 @@ const InformationsStyled = styled.div`
         }
 
         .poste:hover p {
-            max-height: 60px;
+            max-height: 100px;
         }
 
         .photo {

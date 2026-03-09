@@ -16,9 +16,12 @@ export default function Work() {
     ]
 
     const itemsPro = [
-        {id: 1, name:"Réalités oncologiques", techno:"(HTML, CSS et JS)", link:"https://www.realites-oncologiques.com/accueil-138668", image:"images/realites-oncologiques.png"},
-        {id: 2, name:"Village santé", techno:"(HTML, CSS et JS)", link:"https://www.mediscoop.net/village-sport-et-sante/", image:"images/village.png"},
-        {id: 3, name:"Sofmer", techno:"(HTML, CSS et JS)", link:"https://www.sofmer.com/", image:"images/sofmer.png"},
+        {id: 1, name:"New Deal Santé", techno:"(HTML, CSS et JS)", link:"https://www.newdealsante.com/", image:"images/newdealsante.png"},
+        {id: 2, name:"JIRP", techno:"(HTML, CSS et JS)", link:"https://jirp.info/", image:"images/jirp.png"},
+        {id: 3, name:"JIRD", techno:"(HTML, CSS et JS)", link:"https://jird.info/", image:"images/jird.png"},
+        {id: 4, name:"Réalités oncologiques", techno:"(HTML, CSS et JS)", link:"https://www.realites-oncologiques.com/accueil-138668", image:"images/realites-oncologiques.png"},
+        {id: 5, name:"Village santé", techno:"(HTML, CSS et JS)", link:"https://www.mediscoop.net/village-sport-et-sante/", image:"images/village.png"},
+        {id: 6, name:"Sofmer", techno:"(HTML, CSS et JS)", link:"https://www.sofmer.com/", image:"images/sofmer.png"},
     ]
 
     // comportements
@@ -27,27 +30,18 @@ export default function Work() {
     return (
         <WorkStyled>
             <h2>Mes projets</h2>
-            <p>Vue d'ensemble</p>
-
-            <p>
-                Vous trouverez ici un aperçu de mes projets réalisés principalement en <span>HTML, CSS et JS</span>.
-                Ils sont classés du plus récent au plus ancien.
-                <br />
-                Un projet est actuellement en cours de développement avec <span>React</span>, d'ailleurs ce site a été conçu également en React.
-            </p>
-
 
             <ul>
                 <li>
                     <h3>Professionnels</h3>
-                    <p>Toute la partie <span>intégration front</span> sur ces trois sites a été entièrement conçue par mes soins dans le cadre de mon poste actuel d'<span>Intégrateur web</span> chez <a href="https://fr.linkedin.com/company/santoredition" target="_blank">Santor&nbsp;Edition</a>. 
+                    <p>Les interfaces front-end de ces sites ont été intégrées par mes soins dans le cadre de mon poste actuel d'<span>Intégratrice web</span> chez <a href="https://fr.linkedin.com/company/santoredition" target="_blank">Santor&nbsp;Edition</a>. 
                     </p>
 
-                    <p style={{marginBottom:"0"}}>Stack technique</p>
+                    <p style={{marginBottom:"0"}}>Environnement technique :</p>
                     <ul>
-                        <li>Front-end - HTML5, CSS3, JS, Bootstrap.</li>
-                        <li>Back-end - Twig, PHPMyAdmin.</li>
-                        <li>Outils - PhpStorm, FileZilla, Photoshop, Illustrator.</li>
+                        <li>Front-end - HTML5, CSS3, JS, Bootstrap, Tailwind</li>
+                        <li>Back-end - Twig, PHPMyAdmin</li>
+                        <li>Outils - PhpStorm, FileZilla, Photoshop, Illustrator</li>
                     </ul>
 
                     <div className="list-items">
@@ -62,10 +56,7 @@ export default function Work() {
 
                 <li>
                     <h3>Personnels</h3>
-                    <p>Cette section met en avant des projets personnels que j'ai réalisés dans le but de renforcer mes compétences et d'explorer de nouvelles idées. Le dernier projet "Crazee burger" a été réalisé en React et il est toujours en cours de production.</p>
-                    <p>
-                    Bien que ces projets reflètent seulement pour la plupart mes premiers pas dans le domaine du web, j'ai trouvé important de les montrer car ils témoignent de ma volonté d'évoluer.
-                    </p>
+                    <p>Cette section présente des projets personnels réalisés pour pratiquer et approfondir mes compétences en développement.</p>
                     <div className="list-items">
                         {itemsPerso.map(item =>( 
                             <LinkItemStyled className="items" key={item.id} href={item.link} target="_blank" image={item.image}>
@@ -84,10 +75,6 @@ export default function Work() {
 }
 
 const WorkStyled = styled.div`
-    h2 + p {
-        color: var(--color-links);
-    }
-
     ul {
         margin-bottom: 20px;
         li {
@@ -114,7 +101,7 @@ const WorkStyled = styled.div`
 
     h3 {
         margin-bottom: 10px;
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     a {

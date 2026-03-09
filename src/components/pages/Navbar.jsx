@@ -20,8 +20,8 @@ export default function Navbar() {
       }, [isDarkMode]);
 
     const menuItems = [
-        {id: 1, name: "À propos", icon: <CiMemoPad />, path:"/", hash:"about"},
-        {id: 2, name: "Projets", icon: <MdBusinessCenter />, path:"/work", hash:"about"},
+        {id: 1, name: "Projets", icon: <MdBusinessCenter />, path:"/", hash:"work"},        
+        {id: 2, name: "À propos", icon: <CiMemoPad />, path:"/about", hash:"about"},
         {id: 3, name: "Contact", icon: <TiContacts />, path:"/contact"},
     ]
 

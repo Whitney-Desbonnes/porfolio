@@ -9,50 +9,29 @@ export default function About() {
     return (
         <AboutStyled>
             <h2>À propos de moi</h2>
-            <p>Présentation</p>
-
-
-            <p className="accroche">Tout a commencé...</p>
+            
             <p>
-                Après avoir terminé mes études supérieures en comptabilité, où j'ai décidé de me réorienter dans le <span>domaine du web</span>.
-                <br />
-                Pour concrétiser cette transition, j'ai intégré l'école Webforce 3 et j'ai obtenu le <span>diplôme de Développeur Front-End</span>. 
-                Cette formation m'a permis de développer des bases solides en <span>HTML, CSS et JavaScript</span>.
+                Je suis <span>intégratrice web</span> avec plus de 4 ans d'expérience dans l'intégration d'interfaces web et le développement de fonctionnalités interactives en HTML, CSS et JavaScript.
             </p>
 
-
-            <p className="accroche">Ma carrière...</p>
             <p>
-                A débuté aux côtés de l'entreprise <a href="https://fr.linkedin.com/company/publications-agora-france" target="_blank">Publications&nbsp;Agora</a> en tant qu'<span>Intégrateur Web Emailing</span>, où j'ai acquis une première expérience professionnelle dans la <span>création de campagnes numériques</span> performantes.
-                <br />
-                Aujourd'hui, j'occupe le poste d'<span>Intégrateur Web</span> chez <a href="https://fr.linkedin.com/company/santoredition" target="_blank">Santor&nbsp;Édition</a> depuis maintenant 2 ans, où je continue à collaborer sur divers projets.
+                J’ai débuté ma carrière en mars 2022 chez <a href="https://fr.linkedin.com/company/publications-agora-france" target="_blank">Publications&nbsp;Agora</a>, où j’ai travaillé sur le développement de landing pages et l’intégration de campagnes emailing.
             </p>
 
-            <p className="accroche">Cependant...</p>
             <p>
-                Bien que ces expériences m'aient permis de consolider mes compétences, elles ont limité ma progression vers des compétences plus avancées et ne m'ont pas offert l'<span>opportunité de travailler dans des environnements techniques plus exigeants</span>.
+                Aujourd’hui, je suis intégratrice Web chez <a href="https://fr.linkedin.com/company/santoredition" target="_blank">Santor&nbsp;Édition</a>, où j’intègre des interfaces web à partir de maquettes et participe au développement de fonctionnalités interactives en JavaScript.
             </p>
 
-
-            <p className="accroche">Désormais...</p>
             <p>
-                Je suis déterminée à progresser dans ma carrière en tant que <span>Développeur Front-End</span>. 
-                <br />
-                C'est pourquoi je recherche actuellement un poste qui me permettra de travailler sur <span>des projets plus variés et ambitieux</span>, tout en élargissant mon expertise, notamment sur un framework tel que <span>React</span>, sur lequel je me forme en autodidacte depuis plusieurs mois.
+                Je recherche aujourd’hui un poste de <span>développeur front-end</span>, idéalement dans une entreprise travaillant avec React, afin de mettre en pratique les compétences que j’ai développées en autodidacte et de continuer à progresser sur des projets web plus ambitieux.
             </p>
         </AboutStyled>
     )
 }
 
 const AboutStyled = styled.div`
-    h2 + p {
-        color: var(--color-links);
-    }
-
-    .accroche {
-        margin-top: 30px;
-        margin-bottom: 0;
-        font-weight: 600;
+    h2 {
+        margin-bottom: 10px;
     }
 
     p {

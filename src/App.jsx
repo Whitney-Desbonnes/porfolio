@@ -14,8 +14,8 @@ function App() {
       element: <Layout/>,
       errorElement: <div>Error Page</div>,
       children: [
-        { path: "/", element: <About /> },
-        { path: "/work", element: <Work /> },
+        { path: "/", element: <Work />},
+        { path: "/about", element: <About /> },
         { path: "/contact", element: <Contact /> },
       ],
     },
